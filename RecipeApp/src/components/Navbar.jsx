@@ -1,7 +1,7 @@
 export default function Navbar() {
   return (
-    <div className="navbar bg-base-100">
-      <a className="btn btn-ghost text-xl">Food Recipe</a>
+    <div className="navbar bg-neutral text-neutral-content">
+      <button className="btn btn-ghost text-xl">🍔 Food Recipe</button>
     </div>
   );
 }

@@ -19,7 +19,7 @@ export default function Search({ foodData, setFoodData }) {
       <label className="input input-bordered flex items-center gap-2 w-80">
         <input
           type="text"
-          className="grow"
+          className="grow text-black"
           value={query}
           onChange={(e) => setQuery(e.target.value)}
           placeholder="Search"
@@ -27,8 +27,8 @@ export default function Search({ foodData, setFoodData }) {
         <svg
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 16 16"
-          fill="currentColor"
-          className="h-4 w-4 opacity-70"
+          fill="black"
+          className="h-4 w-4 "
         >
           <path
             fillRule="evenodd"

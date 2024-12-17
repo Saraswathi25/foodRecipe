@@ -16,7 +16,7 @@ export default function FoodItem({ food, setFoodId }) {
             onClick={() => {
               setFoodId(food.id);
             }}
-            className="btn bg-green-500 text-white"
+            className="btn  bg-neutral text-neutral-content"
           >
             View Recipe
           </button>
