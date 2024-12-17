@@ -7,6 +7,7 @@ import Navbar from "./components/Navbar";
 import Container from "./components/Container";
 import InnerContainer from "./components/InnerContainer";
 import FoodDetail from "./components/FoodDetail";
+import Hero from "./components/Hero";
 
 function App() {
   const [foodData, setFoodData] = useState([]);
@@ -15,7 +16,8 @@ function App() {
   return (
     <>
       <Navbar />
-      <Search foodData={foodData} setFoodData={setFoodData} />
+      <Hero foodData={foodData} setFoodData={setFoodData} />
+
       <Container>
         <InnerContainer>
           <FoodList setFoodId={setFoodId} foodData={foodData} />

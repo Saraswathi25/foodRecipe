@@ -19,22 +19,18 @@ export default function FoodDetail({ foodId }) {
   console.log(food);
   return (
     <>
-      <div className="card bg-base-100 w-full shadow-xl">
-        <h2 className="card-title mt-10 ml-14">{food.title}</h2>
+      <div className="card bg-base-100 w-full shadow-xl justify-center items-center">
+        <h2 className="card-title mt-10 text-center">{food.title}</h2>
         <div className="flex justify-center items-center">
           <img src={food.image} alt={food.title} className="mt-4 w-full" />
         </div>
         <div className="card-body">
-          <div className="badge ">⌚{food.readyInMinutes} Minutes</div>
-          <div className="badge ">👨‍👩‍👧‍👦{food.servings} </div>
-          {food.vegan && (
-            <div className="badge ">{food.vegan ? "🐮 Vegan" : ""} </div>
-          )}
-          <div className="badge ">
-            {food.vegetarian ? "🥕 Vegetarian" : "🍗 Non-Vegetarian"}
-          </div>
-          <div className="badge ">
-            💲{(food.pricePerServing / 100).toFixed(2)} Per Serving{" "}
+          <div className="flex justify-around">
+            <div>⌚{food.readyInMinutes} Minutes</div>
+            <div>👨‍👩‍👧‍👦 {food.servings} Persons</div>
+            {food.vegan && <div>{food.vegan ? "🐮 Vegan" : ""} </div>}
+            <div>{food.vegetarian ? "🥕 Vegetarian" : "🍗 Non-Vegetarian"}</div>
+            <div>💲{(food.pricePerServing / 100).toFixed(2)} Per Serving </div>
           </div>
           <h2 className="card-title">Ingredients</h2>
           <ItemList food={food} isLoading={isLoading} />
@@ -46,11 +42,6 @@ export default function FoodDetail({ foodId }) {
               <li>{step.step}</li>
             ))
           )}
-
-          <div className="card-actions justify-end">
-            <div className="badge badge-outline">Fashion</div>
-            <div className="badge badge-outline">Products</div>
-          </div>
         </div>
       </div>
     </>
